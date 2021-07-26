@@ -9,7 +9,29 @@
 
 > 用`Scrapy`实现100例爬虫（暂定100例，不知2021年末是否可以完成）
 
+## 002.豆瓣热门电影（列表 + 详情）
+
+> https://movie.douban.com/explore#!type=movie&tag=%E7%83%AD%E9%97%A8&sort=recommend&page_limit=20&page_start=0
+
+## 003.电影天堂最新电影（列表 + 详情）
+
+> https://www.dydytt.net/html/gndy/dyzz/index.html
+
+## 004.3G壁纸（列表 + 壁纸下载）
+
+> https://www.3gbizhi.com/sjbz/index_1.html
+
+## 005.掘金热榜（列表）
+
+> https://juejin.cn/?sort=hottest
+
+## 006.掘金沸点（列表）
+
+> https://juejin.cn/pins/recommended
+
 # 已完成
 
-## [CSDN热榜100](csdnHot)
+## [001.CSDN热榜（列表）](csdnHot)
+
+> https://blog.csdn.net/rank/list/content?type=c%2Fc%2B%2B
 
