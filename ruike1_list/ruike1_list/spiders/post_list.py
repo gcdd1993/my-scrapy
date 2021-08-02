@@ -17,9 +17,9 @@ class PostListSpider(scrapy.Spider):
             meta = Ruike1ListItem()
             self.__set_title(meta, tbody)
             self.__set_url(meta, tbody)
-            self.__set_author(meta, tbody)
-            self.__set_reply_num(meta, tbody)
-            self.__set_view_num(meta, tbody)
+            # self.__set_author(meta, tbody)
+            # self.__set_reply_num(meta, tbody)
+            # self.__set_view_num(meta, tbody)
             yield meta
         self.current_page += 1
         if self.current_page > self.max_page:

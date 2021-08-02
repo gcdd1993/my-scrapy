@@ -11,6 +11,6 @@ class Ruike1ListItem(Item):
     # name = scrapy.Field()
     title = Field()
     url = Field()
-    author = Field()
-    reply_num = Field()  # 回复数
-    view_num = Field()  # 查看数
+    # author = Field()
+    # reply_num = Field()  # 回复数
+    # view_num = Field()  # 查看数
