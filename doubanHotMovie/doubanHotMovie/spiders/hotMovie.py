@@ -1,8 +1,6 @@
 import json
-import random
-import string
-import scrapy
 
+import scrapy
 from doubanHotMovie.items import DoubanHotMovieItem
 
 
