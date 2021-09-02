@@ -1,4 +1,3 @@
-import json
 import os
 import sys
 
@@ -12,7 +11,7 @@ def checkin():
     url = f"{hostname}/wp-json/b2/v1/userMission"
     headers = {
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36 Edg/92.0.902.84",
-        "authorization": f"Bearer {get_token()}"
+        "authorization": "Bearer " + get_token()
     }
     r = requests.post(url, headers=headers).json()
     try:
