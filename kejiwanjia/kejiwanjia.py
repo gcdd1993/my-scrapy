@@ -3,17 +3,21 @@ import sys
 
 import requests
 
+requests.packages.urllib3.disable_warnings()
+
 hostname = "https://www.kejiwanjia.com"
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36 Edg/92.0.902.84"
+}
 
 
 # 签到
 def checkin():
+    s = requests.session()
+    s.headers.update({"authorization": "Bearer " + get_token()})
     url = f"{hostname}/wp-json/b2/v1/userMission"
-    headers = {
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36 Edg/92.0.902.84",
-        "authorization": "Bearer " + get_token()
-    }
-    r = requests.post(url, headers=headers).json()
+    print(headers)
+    r = s.post(url, headers=headers).json()
     try:
         bean = int(r.replace("\"", ""))
         print(f"您今天已经签到，获得{bean}个积分")
