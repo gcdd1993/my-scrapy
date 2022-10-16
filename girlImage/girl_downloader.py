@@ -15,7 +15,8 @@ headers = {
 def open_url(_url, _base_path, _name):
     _path = _base_path + _name
     html = requests.request("GET", _url, headers=headers).text
-    images = parsel.Selector(html).xpath("//*[@class=\"tl_article_content\"]/figure/img/@src").extract()
+    images = parsel.Selector(html).xpath(
+        "//*[@class=\"tl_article_content\"]/figure/img/@src").extract()
     if not os.path.exists(_path):
         os.makedirs(_path)
     for i in trange(len(images), postfix=f"正在下载 {_name}"):
@@ -36,7 +37,8 @@ def download_image(image, _path):
             pass
             # print(f"{filename} is already downloaded.")
         else:
-            img_data = requests.request("GET", image_url, headers=headers).content
+            img_data = requests.request(
+                "GET", image_url, headers=headers).content
             with open(f"{img_path}", 'wb') as _f:
                 # print('下载图片', filename)
                 _f.write(img_data)
